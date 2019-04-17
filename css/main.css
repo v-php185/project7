@@ -1,9 +1,57 @@
-.div1 {
-  background-color: red;
-  border: 2px solid black;
-  margin: 20px;
+.row1-card {
+  background-color: #212529;
+  padding: 10px;
 }
 
+.row1-graph-card {
+  padding: 0;
+  background-color: #36404a;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.circle {
+  padding: 0;
+  margin: 0;
+  width: 120px;
+}
+
+.row1-graph-card-count {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.row1-graph-card-count>p {
+  text-align: right;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.row1-graph-card-count>p:nth-child(1) {
+  color: #98a6ad;
+  font-size: 25px;
+}
+
+.row1-card:nth-child(1)>.row1-graph-card>.row1-graph-card-count>p:nth-child(1) {
+  color: #00b19d;
+}
+
+.row1-card:nth-child(2)>.row1-graph-card>.row1-graph-card-count>p:nth-child(1) {
+  color: #3bafda;
+}
+
+.row1-card:nth-child(3)>.row1-graph-card>.row1-graph-card-count>p:nth-child(1) {
+  color: #f76397;
+}
+
+.row1-card:nth-child(4)>.row1-graph-card>.row1-graph-card-count>p:nth-child(1) {
+  color: #98a6ad;
+}
+
+.row1-graph-card-count>p:nth-child(2) {
+  color: #98a6ad;
+  font-size: 15px;
+}
 
 
 body {

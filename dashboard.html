@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css" >
+    <link href="css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -60,7 +61,8 @@
                         </li>
                     </ul>
 
-                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                    <h6
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
                         <span>Saved reports</span>
                         <a class="d-flex align-items-center text-muted" href="#">
                             <span data-feather="plus-circle"></span>
@@ -96,23 +98,128 @@
             </nav>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Dashboard</h1>
                 </div>
-                
                 <h2>Section title</h2>
                 <div class="row">
-                    <div class="col-md-3 div1">ssssssssss</div>
-                    <div class="col-md-3 div1">ssssssssss</div>
-                    <div class="col-md-3 div1">ssssssssss</div>
-                    <div class="col-md-3 div1">ssssssssss</div>
+                    <div class="col-xl-3 col-md-6 row1-card">
+                        <div class="col-md-12 row1-graph-card">
+                            <div class="circle">
+                                <div id="circle-bar1"></div>
+                            </div>
+                            <div class="row1-graph-card-count">
+                                <p>2562</p>
+                                <p>Total Sales today</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 row1-card">
+                        <div class="col-md-12 row1-graph-card">
+                            <div class="circle">
+                                <div id="circle-bar2"></div>
+                            </div>
+                            <div class="row1-graph-card-count">
+                                <p>5685</p>
+                                <p>Daily visitors</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 row1-card">
+                        <div class="col-md-12 row1-graph-card">
+                            <div class="circle">
+                                <div id="circle-bar3"></div>
+                            </div>
+                            <div class="row1-graph-card-count">
+                                <p>$ 12480</p>
+                                <p>Total Earning</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 row1-card">
+                        <div class="col-md-12 row1-graph-card">
+                            <div class="circle">
+                                <div id="circle-bar4"></div>
+                            </div>
+                            <div class="row1-graph-card-count">
+                                <p>62</p>
+                                <p>Pending Orders</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+    <script src="js/jquery.circliful.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#circle-bar1").circliful({
+                animation: 1,
+                animationStep: 5,
+                foregroundBorderWidth: 15,
+                backgroundBorderWidth: 15,
+                percent: 35,
+                textSize: 28,
+                textStyle: 'font-size: 12px;',
+                textColor: '#666',
+                foregroundColor: '#00b19d',
+                backgroundColor: '#505a66',
+                foregroundBorderWidth: 10,
+                backgroundBorderWidth: 10,
+            });
+            $("#circle-bar2").circliful({
+                animation: 1,
+                animationStep: 5,
+                foregroundBorderWidth: 15,
+                backgroundBorderWidth: 15,
+                percent: 75,
+                textSize: 28,
+                textStyle: 'font-size: 12px;',
+                textColor: '#666',
+                foregroundColor: '#3bafda',
+                backgroundColor: '#505a66',
+                foregroundBorderWidth: 10,
+                backgroundBorderWidth: 10,
+            });
+            $("#circle-bar3").circliful({
+                animation: 1,
+                animationStep: 5,
+                foregroundBorderWidth: 15,
+                backgroundBorderWidth: 15,
+                percent: 58,
+                textSize: 28,
+                textStyle: 'font-size: 12px;',
+                textColor: '#666',
+                foregroundColor: '#f76397',
+                backgroundColor: '#505a66',
+                foregroundBorderWidth: 10,
+                backgroundBorderWidth: 10,
+            });
+            $("#circle-bar4").circliful({
+                animation: 1,
+                animationStep: 5,
+                foregroundBorderWidth: 15,
+                backgroundBorderWidth: 15,
+                percent: 49,
+                textSize: 28,
+                textStyle: 'font-size: 12px;',
+                textColor: '#666',
+                foregroundColor: '#98a6ad',
+                backgroundColor: '#505a66',
+                foregroundBorderWidth: 10,
+                backgroundBorderWidth: 10,
+            });
+        });
+    </script>
 </body>
 
 </html>
